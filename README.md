@@ -69,31 +69,24 @@ ffmpeg -version
 - `/람다음악관리 볼륨 [1~100]`
 - `/람다음악관리 초기화`
 
-## 7) 프로젝트 구조 (기능별 분리)
+## 7) 프로젝트 구조 (한눈에 보기)
 
 ```text
 bot/
-  core/                         # 봇 실행/클라이언트/락
-  shared/                       # 공통 권한/브랜딩/임베드 유틸
-  features/
-    admin/                      # 관리자 패널 기능
-      cogs/
-      views/
-      modals/
-      helpers/
-    ticket/                     # 문의 기능
-      cogs/
-      views/
-      modals/
-      helpers/
-    music/                      # 음악 기능
-      cogs/
-      views/
-      modals/
-      helpers/
-      services/
-  services/                     # 데이터 저장/로그/재생 핵심 서비스
-  ui/                           # 기존 경로 호환 래퍼
-  cogs/                         # 기존 경로 호환 래퍼
-  utils/                        # 기존 경로 호환 래퍼
+├─ core/              # 실행, 봇 클라이언트, 중복 실행 방지
+├─ features/          # 기능별 코드
+│  ├─ admin/          # 관리자 패널
+│  ├─ ticket/         # 문의 시스템
+│  └─ music/          # 음악 시스템
+├─ services/          # 설정 저장(JSON), 문의 로그, 음악 재생 핵심
+├─ shared/            # 공통 코드(권한 체크, 임베드 공통, 브랜딩)
+├─ cogs/              # 레거시 import 호환용
+├─ ui/                # 레거시 import 호환용
+└─ utils/             # 레거시 import 호환용
 ```
+
+처음 수정할 때는 보통 아래만 보면 됩니다.
+- 관리자 기능: `bot/features/admin`
+- 문의 기능: `bot/features/ticket`
+- 음악 기능: `bot/features/music`
+- 서버별 설정 저장: `bot/services/settings_service.py`
