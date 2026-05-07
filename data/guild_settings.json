@@ -1,0 +1,28 @@
+{
+  "1501273098950017037": {
+    "admin_panel_channel_id": null,
+    "admin_panel_message_id": null,
+    "ticket_panel_channel_id": null,
+    "ticket_category_id": null,
+    "ticket_log_channel_id": null,
+    "ticket_closed_count": 0,
+    "mention_role_ids": [],
+    "ticket_panel_embed": {
+      "title": "문의 센터",
+      "description": "아래 버튼을 눌러 문의를 생성해주세요.",
+      "button_label": "문의하기",
+      "color": 5763719
+    },
+    "music_enabled": true,
+    "music_panel_channel_id": null,
+    "music_default_volume": 50,
+    "music_allow_youtube_url": true,
+    "music_allow_search": true,
+    "music_auto_disconnect_minutes": 10,
+    "music_panel_embed": {
+      "title": "람다 음악 패널",
+      "description": "아래 버튼으로 음악을 재생/제어하세요.",
+      "color": 1752220
+    }
+  }
+}
