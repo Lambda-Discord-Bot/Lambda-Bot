@@ -5,7 +5,6 @@
 ## 1) 설치
 
 ```powershell
-cd "C:\Users\hyunw\Desktop\Discord Lambda Bot"
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
